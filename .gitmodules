@@ -1,0 +1,3 @@
+[submodule "sdk/uart_demo/src"]
+	path = sdk/uart_demo/src
+	url = ../uart_demo_linux.git
