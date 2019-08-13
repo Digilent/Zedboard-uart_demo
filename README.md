@@ -1,7 +1,15 @@
 # Zedboard UART Demo
-This repo contains the hardware platform for the Zedboard UART Demo. It also contains,a s submodule, the uart_demo SDK application.
+This repo contains the hardware platform for the Zedboard UART Demo. It also contains, as submodule, the uart_demo SDK application.
+It configures the UART lines on JC2 (uart_tx) and JC3 (uart_rx) pins of Zedboard. By connecting the [PmodUSBUART](https://store.digilentinc.com/pmod-usbuart-usb-to-uart-interface/) 
+on the upper row of JC Pmod, the UART communication can be monitored in a serial terminal on PC. When using the Pmods like [PmodGPS](https://store.digilentinc.com/pmodgps-gps-receiver-retired/), 
+uart_tx and uart_rx pins positions should be swapped in the xdc file.
 
-Guidance: 
+Vivado version: 2019.1.
+Petalinux version: 2019.1.
+Zedboard BSP: [Zedboard BSP](https://www.xilinx.com/member/forms/download/xef.html?filename=avnet-digilent-zedboard-v2019.1-final.bsp). Make sure to get the hardware description into the petalinux image using petalinux-config --get-hw-description.
+
+
+## Guidance: 
 
 To re-create a Vivado project:
 0. Make sure the directory does not already contain a project with the same name. 
@@ -23,4 +31,5 @@ projects you want imported and make sure "Copy projects into workspace" is unche
 
 Projects:
 uart_demo	- the linux app that demonstrates the use of UART.
+
 
